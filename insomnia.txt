@@ -1,0 +1,45 @@
+Aqui estão as rotas que definimos no nosso aplicativo:
+
+Buscar todas as tasks:
+
+Método: GET
+URL: http://localhost:3000/tasks
+Essa rota retornará todas as tasks existentes no formato JSON.
+
+Criar uma nova task:
+
+Método: POST
+URL: http://localhost:3000/tasks
+Corpo da Requisição (JSON):
+json
+Copy code
+{
+  "title": "Nova Task",
+  "description": "Descrição da nova task",
+  "status": "pending"
+}
+Essa rota criará uma nova task com base nos dados fornecidos no corpo da requisição.
+
+Atualizar uma task existente:
+
+Método: PUT
+URL: http://localhost:3000/tasks/{id}
+Substitua {id} pelo ID da task que deseja atualizar. Por exemplo, se o ID for 1, a URL seria: http://localhost:3000/tasks/1.
+
+Corpo da Requisição (JSON):
+json
+Copy code
+{
+  "title": "Título atualizado",
+  "description": "Descrição atualizada",
+  "status": "completed"
+}
+Essa rota atualizará os campos da task com base nos dados fornecidos no corpo da requisição.
+
+Deletar uma task:
+
+Método: DELETE
+URL: http://localhost:3000/tasks/{id}
+Substitua {id} pelo ID da task que deseja deletar. Por exemplo, se o ID for 1, a URL seria: http://localhost:3000/tasks/1.
+
+Essa rota deletará a task correspondente ao ID fornecido.
